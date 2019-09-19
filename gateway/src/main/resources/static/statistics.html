@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Earthquakes and shocks</title>
+
+    <!--/* JQuery */-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--/* bootstrap */-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!--/* DateTime picker */-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <!--/* Table */-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+
+    <!--/* Site */-->
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js"></script>
+    <script src="/js/follow.js"></script>
+
+</head>
+<body>
+
+<header class="jumbotron" style="margin-bottom: 0">
+    <div class="container">
+        <h1>GOLDFINGER PROJECT</h1>
+    </div>
+</header >
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container">
+        <ul class="navbar-nav nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/map.html" >Map</a>
+            </li>
+            <li class="nav-item">
+                <a id="logout" class="nav-link" href="#">Log out</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div id="form" class="container">
+    <div class="tab-content mt-3">
+        <section id="searchReport" class="tab-pane active">
+            <form>
+                <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                    <label class="control-label" for="datepicker-start">Date range</label>
+                    <input type="dates" name="daterange" class="form-control" id="datepicker-start" value="01/05/2019 - 01/06/2019">
+                    <input id="startdate" type="hidden" value="2019-05-01">
+                    <input id="enddate" type="hidden" value="2019-06-01">
+                </div>
+                <div class="form-group">
+                    <label for="search">Search</label>
+                    <input type="text" class="form-control" id="search" placeholder="Search">
+                </div>
+                <a id="btnSearch" class="btn btn-primary" href="#">Search</a>
+                <a id="btnReport" class="btn btn-primary float-right" href="#">Get CSV Report</a>
+            </form>
+        </section>
+    </div>
+
+    <div class="mt-5">
+        <table id="table" data-pagination="true" data-page-size="5">
+            <thead>
+            <tr>
+                <th data-field="username" data-sortable="true">username</th>
+                <th data-field="ipAddress" data-sortable="true">ip address</th>
+                <th data-field="date" data-formatter="dateFormat" data-sortable="true">date/time</th>
+                <th data-field="event" data-sortable="true">event</th>
+                <th data-field="additionalData" data-sortable="true">additional data</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+</body>
+</html>

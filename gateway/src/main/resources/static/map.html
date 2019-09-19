@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map: Earthquakes and shocks</title>
+
+    <!--/* JQuery */-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--/* bootstrap */-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!--/* Bing Map */-->
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AhkX-F72p_c24ureMMWahFKS6aZAphzbGO2ESAwOYYc9tKThWVVfryxVpJV8oeyh' async defer></script>
+
+    <!--/* Site */-->
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js"></script>
+    <script src="/js/map.js"></script>
+
+</head>
+<body>
+
+<header class="jumbotron" style="margin-bottom: 0">
+    <div class="container">
+        <h1>GOLDFINGER PROJECT</h1>
+    </div>
+</header >
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container">
+        <ul class="navbar-nav nav">
+            <li id="statistics" class="nav-item">
+                <a class="nav-link" href="statistics.html" >Statistics</a>
+            </li>
+            <li class="nav-item">
+                <a id="logout" class="nav-link" href="#" >Log out</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div id="form" class="container">
+
+    <section id="dropdown" class="mb-5 mt-3">
+        <div class="dropdown">
+            <button id="btnDropdown" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Select category
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" data-value="Earthquake" href="#">Earthquakes</a>
+                <a class="dropdown-item" data-value="Soil" href="#">Soil type</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="maps">
+        <div id="map" style="height: 600px;"></div>
+    </section>
+</div>
+</body>
+</html>

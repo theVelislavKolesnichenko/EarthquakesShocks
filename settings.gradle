@@ -1,0 +1,6 @@
+rootProject.name = 'earthquakes-shocks'
+include 'authapi'
+include 'followapi'
+include 'gateway'
+include 'mapapi'
+

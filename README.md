@@ -1,0 +1,2 @@
+# EarthquakesShocks
+ api architecture
