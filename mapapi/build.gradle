@@ -27,10 +27,10 @@ dependencies {
     runtimeOnly 'org.postgresql:postgresql'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-    compile group: 'org.geotools', name: 'gt-geojson', version: '21.0'
+    /*compile group: 'org.geotools', name: 'gt-geojson', version: '21.0'
     compile group: 'org.geotools', name: 'gt-shapefile', version: '21.0'
     compile group: 'org.geotools', name: 'gt-swing', version: '21.0'
-    compile group: 'org.geotools', name: 'geotools', version: '21.0', ext: 'pom'
+    compile group: 'org.geotools', name: 'geotools', version: '21.0', ext: 'pom'*/
 
     compile group: 'org.locationtech.jts.io', name: 'jts-io-common', version: '1.16.0'
     compile group: 'com.bedatadriven', name: 'jackson-datatype-jts', version: '2.4'
